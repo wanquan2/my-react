@@ -3,8 +3,10 @@ import Banner from '../components/home/Banner'
 import Card from '../components/home/Card'
 import Lattice from '../components/home/Lattice'
 import Note from '../components/home/note'
-import Header from '../components/base/Heaher'
+import Header from '../components/base/Header'
+import Footer from '../components/base/Footer'
 import '../assets/css/Home.scss'
+
 
 
 class Home extends PureComponent {
@@ -38,11 +40,14 @@ class Home extends PureComponent {
     render() {
         return (
             <div className="main">
-                <Header title={this.state.title} />
+                <Header>
+                    <div className="headerself">首页</div>
+                </Header>
                 <Banner list={this.state.list} />
                 <Note noone={this.state.noone} />
                 <Lattice />
                 <Card />
+                <Footer></Footer>
             </div>
         )
     }
